@@ -1,1 +1,12 @@
 ###20 - Terraform VS CloudFormation
+
+Con CloudFormation sei legato ad AWS, invece con Terraform puoi gestire tutti i cloud provider con flessibilità. CloudFormation è scritto in yaml o json.
+Inoltre, TerraForm è scritto tramite il Hashicorp Configuration Language (HCL), che è molto più potente. 
+In Azure abbiamo degli equivalenti di CloudFormation: ARM Templates. In Google Cloud: Deployment Manager. 
+
+Il linguaggio di configurazione HCL, Hashicorp Configuration Language è un linguaggio di configurazione proprietario.
+!!! IMPORTANTE: NON E' UNA STRUTTURA DATI YAML O JSON! E' UNA STRUTTURA A BLOCCHI !!!
+Il vantaggio principale è che con Terraform non si è legati ad un singolo cloud provider!
+
+
+
