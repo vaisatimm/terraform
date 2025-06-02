@@ -1,0 +1,9 @@
+#19 - Gestione Policy
+#
+Terraform può aiurate le persone che collaborano alla gestione dell'infrastruttura, usando delle policy, 
+tramite, ad esempio, un software di nome "Sentinel" (policy-as-a-code).
+
+Quindi tramite TerraForm posso definire degli standard di sicurezza implemntati tramite delle policy, 
+che permettano, ad esempio, di non installare un web-server di 5 anni fa che potrebbe avere delle grosse falle. 
+
+
