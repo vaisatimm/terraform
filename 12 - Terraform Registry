@@ -1,1 +1,7 @@
 ### 12 - Terraform Registry
+
+Un registro di Terraform è un repository centralizzato dove vengono condivisi provider e moduli.
+
+https://registry.terraform.io/
+
+
