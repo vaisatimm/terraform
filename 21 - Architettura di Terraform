@@ -1,2 +1,30 @@
 ### "21 - Architettura di Terraform"
+<<<<<<< HEAD
 L'architettura di Terraform prevede questi elementi. 
+=======
+
+Terraform core usa il protocollo RPC (remote procedure call) per comunicare con i provider.
+
+Terraform è scritto in Golang, assieme ai plugin. 
+
+Il plugin provider serve a fare il deploy di una risorsa, mentre il plugin provisioner 
+serve terminare la configurazione della risorsa dopo che è stata rilasciata, tramite
+"local-exec" o "remote-exec".
+
+
+Terraform core: 
+
+1 - lettura file di config e moduli;
+2 - gestione stato risorse;
+3 - Costruzione del grafo delle risorse;
+4 - esecuzione del "plan";
+5 - comunicazione con i plugin tramite rpc.
+
+All'interno del file di configurazione di terraform troviamo i provider e i provisioner. 
+
+Terraform ha molti provisioner integrati mentre i provider vengono aggiunti dinamicamente quando richiesto. 
+
+
+
+
+>>>>>>> e7fa4fe (Update)
