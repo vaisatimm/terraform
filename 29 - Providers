@@ -1,0 +1,28 @@
+Nei providers.tf si scrivono i provider oppure nel file required_providers.
+
+Una volta che facciamo terraform init, terraform va a scaricare dal terraform registry il provider. 
+
+Facciamo qui sotto un esempio: 
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashcorp/aws"
+      version = "-> 3.27"
+    }
+  }
+}
+
+provider "aws" {
+  profile = "default"
+  region  = "us-west-2"
+}
+
+resource "aws_instance" "app_server" {
+  ami           = "ami-830c94e3"
+  instance_type = "t2.micro"
+  
+  tags = {
+    Name = "ExampleAppServerInstance"
+  }
+}
