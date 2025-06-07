@@ -1,1 +1,8 @@
 I valori di output sono valori restituiti da creazioni di risorse
+I valori di output possono essere passati ad altre risorse affinché li utilizzino. 
+
+3 Argomenti degli output:
+
+1 - Description: descrizione della risorsa;
+2 - Sensitive: nasconde il valore dell'output nella cli di Terraform. 
+3 - Depends_on: significa che l'output di una determinata risorsa, dipende dall'output di altre risorse.
