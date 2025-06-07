@@ -1,1 +1,4 @@
 1 - Possiamo definire i valori delle variabili nelle variabili d'ambiente di Terraform. 
+2 - Possiamo mettere le variabili tutte in un file separato. Queste verranno richiamate in qualche modo negli altri file. 
+3 - E' possibile fare l'override a runtime di alcune variabili come avviene nel lancio degli ansible-navigator per fare un confronto. 
+4 - Definire il valore di una variabile come valore predefinito, durante la dichiarazione delle variabili stesse. 
