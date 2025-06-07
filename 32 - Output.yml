@@ -6,3 +6,20 @@ I valori di output possono essere passati ad altre risorse affinché li utilizzi
 1 - Description: descrizione della risorsa;
 2 - Sensitive: nasconde il valore dell'output nella cli di Terraform. 
 3 - Depends_on: significa che l'output di una determinata risorsa, dipende dall'output di altre risorse.
+
+Esempio di Output: 
+
+output "vpc_id" {
+  description = "ID of project VPC"
+  value       = module.vpc.vpc_id
+}
+
+output "lb_url" {
+  description = "URL of load balancer"
+  value       = "http://${module.elb_http.this_elb_dnb_name}/"
+}
+
+output "web_server_count" {
+  description = "Number of web servers provisioned"
+  value       = "length(module.ec2_instances.instance_ids)
+}
