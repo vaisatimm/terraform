@@ -1,5 +1,5 @@
 # Datasources
-#
+
 
 Facciamo un esempio: ho creato a mano delle risorse sulla console di AWS.
 Però non voglio ricrearle, ma voglio solo che Terraform le utilizzi come fonte di dati.
