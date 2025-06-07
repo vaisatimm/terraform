@@ -1,9 +1,3 @@
-Nei providers.tf si scrivono i provider oppure nel file required_providers.
-
-Una volta che facciamo terraform init, terraform va a scaricare dal terraform registry il provider. 
-
-Facciamo qui sotto un esempio: 
-
 terraform {
   required_providers {
     aws = {
