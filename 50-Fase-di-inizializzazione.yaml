@@ -24,3 +24,19 @@ Ricordiamo che il seguente comando serve a formattare correttamente eventuali fi
 
 $ terraform fmt
 
+Se i file di configurazione sono scritti con una formattazione corretta allora non restituisce nulla a video. 
+Se c'è una indentazione sbagliata, la corregge.
+
+Invece il seguente comando serve a controllare che la configurazione sia corretta e che non manchino 
+relazioni tra le risorse.
+
+$ terraform plan
+
+QUESTA è LA SEQUENZA CORRETTA: 
+
+terraform fmt       # allinea il codice al formato standard
+terraform init      # scarica provider e backend
+terraform validate  # controlla sintassi e coerenza logica
+terraform plan      # mostra le modifiche che verranno effettuate
+terraform apply/destroy     # applica le modifiche sull’infrastruttura
+
