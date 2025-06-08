@@ -30,3 +30,21 @@ provider "aws" {
   region  = var.aws_region
   profile = var.aws_profile
 }
+
+Mentre nel main.tf si mettono i blocchi delle risorse da creare.
+
+!!! Nel terraform.tfstate viene salvato lo stato corrente dell'infrastruttura. 
+Questo file viene salvato nella directory corrente ma si consiglia di salvarlo in un 
+bucket S3. 
+
+### Esempio di backend.tf 
+
+terraform {
+  backend "s3" {
+    bucket         = "mio-terraform-state-bucket"
+    key            = "env/prod/terraform.tfstate"
+    region         = "eu-west-1"
+    encrypt        = true
+    dynamodb_table = "terraform-locks"
+  }
+}
