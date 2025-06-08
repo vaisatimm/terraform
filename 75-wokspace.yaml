@@ -35,3 +35,17 @@ prod
 $:~/desk/terraform/workspace_test# terraform workspace list
   default
 * prod
+
+
+
+C'è da sottolineare che il comando creazione di un nuovo workspace creerà dei file e delle directory
+nella directory corrente come vedi di seguito:
+
+~/desk/terraform/workspace_test# ll
+total 0
+drwxrwxrwx 1 vaisatimm vaisatimm 4096 Jun  8 23:49 ..
+drwxrwxrwx 1 vaisatimm vaisatimm 4096 Jun  8 23:49 terraform.tfstate.d
+drwxrwxrwx 1 vaisatimm vaisatimm 4096 Jun  8 23:49 .
+drwxrwxrwx 1 vaisatimm vaisatimm 4096 Jun  8 23:49 .terraform
+ (master)
+
