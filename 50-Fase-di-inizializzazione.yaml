@@ -1,0 +1,26 @@
+# Fase di inizializzazione
+
+Quando fai: 
+
+$ terraform init
+
+Terraform scarica i provider secondo la versione che abbiamo fissato all'inizio.
+
+Viene calcolato l'hash del provider e poi viene salvato nel file ".terraform.lock.hcl", 
+affiché ogni volta che si fa "terraform init", non viene scaricata una eventuale 
+versione nuova del provider di AWS per esempio e venga usata la versione con cui si è fatto
+la prima volta "terraform init"
+
+Se si vuole invece aggiornare il provider si deve fare: 
+
+$ terraform init -upgrade
+
+In questo caso viene ricalcolato l'hash della versione del provider e viene 
+aggiornato il file .terraform.lock.hcl.
+
+E' sempre bene pushare il .terraform.lock.hcl
+
+Ricordiamo che il seguente comando serve a formattare correttamente eventuali file, formattati male: 
+
+$ terraform fmt
+
