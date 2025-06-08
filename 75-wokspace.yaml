@@ -53,3 +53,11 @@ Se provi a cancellare il workspace su cui ti trovi adesso ti va in errore; prima
 ad un altro workspace e poi cancellare: 
 
 $:~/desk/terraform/workspace_test# terraform workspace delete prod
+
+!!! IMPORTANTE : NON C'è BISOGNO CHE NOI CREIAMO UNA CARTELLA PER OGNI AMBIENTE DI WORKSPACE PERCHé
+TERRAFORM LO FARA' PER NOI METTENDONE UNA NUOVA PER OGNI WORKSPACE NELLA CARTELLA: terraform.tfstate.d 
+
+$ ls 
+stage/ dev/ prod/
+
+
