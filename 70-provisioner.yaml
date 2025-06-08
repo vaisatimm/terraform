@@ -2,3 +2,13 @@ Permette la configurazione post-deploy dell'infrastruttura.
 
 Ad esempio si può voler installare Python dopo la creazione della macchina.
 
+Consideriamo il fatto che possono complicare la gestione dell'infrastruttura.
+
+Ci sono 4 tipi di provisioner: 
+
+- shell provisioner: consente di eseguire comandi shell locali o remoti;
+- remote exec provisioner: consente di eseguire comandi tramite ssh;
+- file provisioner: consente di copiare file e dir da macchina locale a remota o da remota a remota;
+- Chef, Ansible, etc: tool di terze parti.
+
+
