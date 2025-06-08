@@ -48,3 +48,7 @@ terraform {
     dynamodb_table = "terraform-locks"
   }
 }
+
+!!! Terraform utilizza il locking remoto: questo significa che se un altro utente sta modificando il terraform.tfstate sul s3 
+io non posso modificarlo in modo concorrenziale. 
+
