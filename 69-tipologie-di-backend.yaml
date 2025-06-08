@@ -1,0 +1,4 @@
+# Tipi di backend
+
+Il terraform.tfstate può essere memorizzato in locale "backend locale" per progetti di piccole dimensioni.
+Oppure su un bucket s3 in modo da avere il locking dello state ed evitare scritture concorrenziali.
