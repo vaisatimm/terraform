@@ -1,3 +1,17 @@
 # Analisi "State file" : "terraform.tfstate"
 
 
+All'interno di questo file terraform tiene traccia dello stato corrente dell'infrastruttura. 
+In questo file ci sono tutte le informazioni di quelle che sono le risorse attualmente presenti
+nella nostra infrastruttura. Senza questo "terraform.tfstate" Terraform non protrebbe funzionare: 
+
+Lo stato dell'infrastruttura può essere visto sia dal "terraform.tfstate" che dal comando: 
+
+$ terraform show
+
+Se dovessi per sbaglio cancellare il terraform.tfstate allora perderesti tutta la traccia dell'infrastruttura
+creata.
+
+Allora aiutandoti con il main.tf dovresti importare ogni risorsa manualmente: 
+
+$ terraform import aws_instance.web_server i-0abc1234def567890
