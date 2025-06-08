@@ -1,0 +1,6 @@
+Le funzioni integrate possono servire per manipolare dati derivanto da data sources.
+
+Esempi sono: la funzione jsoncode per convertire un json di grandi dimensioni da passare a qualcosa.
+             la funzione split per dividere stringe.
+
+
