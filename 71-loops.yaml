@@ -1,0 +1,41 @@
+# Loops
+
+Ci sono 3 modi per gestire i loop:
+
+- count;
+- for_each;
+- for;
+
+- count permette di indicare quante istanze di una certa risorsa si vogliono.
+
+- for_each serve per creare una risorsa per ogni occorrenza in un insieme di valori.
+
+- for serve solo a manipolare stringhe e a fare delle mappature uno ad uno di elementi di una lista.
+
+Quindi il for si usa per creare una mappatura uno ad uno di ogni elemento di una lista, mentre il for_each serve per creare più elementi di qualcosa per ogni elemento della lista di partenza.
+
+
+Esatto, il tuo riassunto coglie l’essenza, con però una piccola precisazione sul “cosa” viene prodotto:
+
+for
+
+Uno-a-uno fra gli elementi di una lista (o mappa) di partenza e quelli della collezione risultante, ma sempre all’interno di un’espressione:
+
+Prendi ogni elemento della lista ➔ lo trasformi ➔ produci una nuova lista (o mappa).
+
+Non genera “oggetti” esterni, ma solo valori (liste, mappe, stringhe, numeri…).
+
+for_each
+
+Uno-a-uno fra gli elementi di una lista (o mappa) di partenza e le risorse o i moduli che Terraform crea:
+
+Per ogni elemento ➔ istanzia un blocco resource (o module) indipendente.
+
+Il risultato non è una lista di valori, ma molteplici “cose” (bucket, VM, record DNS, moduli…).
+
+In soldoni
+Vuoi solo rimappare o filtrare dati (per esempio fare ["a","b","c"] → ["A","B","C"])?
+Usa for.
+
+Vuoi invece effettivamente creare più entità infrastrutturali — una copia della stessa risorsa parametrizzata diversamente per ciascun elemento?
+Usa for_each.
