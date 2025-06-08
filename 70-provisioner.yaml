@@ -1,0 +1,4 @@
+Permette la configurazione post-deploy dell'infrastruttura. 
+
+Ad esempio si può voler installare Python dopo la creazione della macchina.
+
