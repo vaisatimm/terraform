@@ -49,3 +49,7 @@ drwxrwxrwx 1 vaisatimm vaisatimm 4096 Jun  8 23:49 .
 drwxrwxrwx 1 vaisatimm vaisatimm 4096 Jun  8 23:49 .terraform
  (master)
 
+Se provi a cancellare il workspace su cui ti trovi adesso ti va in errore; prima bisogna passare 
+ad un altro workspace e poi cancellare: 
+
+$:~/desk/terraform/workspace_test# terraform workspace delete prod
