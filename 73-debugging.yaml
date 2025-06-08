@@ -1,0 +1,7 @@
+# Debugging
+Impostare il livello di log di terraform si può fare impostando la variabile d'ambiente:
+
+TF_LOG a TRACE, DEBUG, INFO, WARN o ERROR.
+
+TF_LOG_PATH serve per specificare dove andare a salvare il log di terraform
+

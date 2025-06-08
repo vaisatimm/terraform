@@ -1,0 +1,37 @@
+I workspace ci consentono di deployare più ambienti senza problemi di overlapping, usando lo stesso codice.
+
+Ogni workspace ha uno state file separato.
+
+Nelle vecchie versioni di terraform i workspace si chiamavano terraform environments. 
+
+
+### video 76
+
+terrafor workspace show
+default
+
+
+
+$:~/desk/terraform# terraform workspace show
+default ### L'UNICO WORKSPACE, QUELLO DI DEFAULT
+ 
+$:~/desk/terraform# mkdir workspace_test
+ 
+$:~/desk/terraform# cd workspace_test
+ 
+
+creiamo uno nuovo: 
+
+$:~/desk/terraform/workspace_test# terraform workspace new prod
+Created and switched to workspace "prod"!
+
+You're now on a new, empty workspace. Workspaces isolate their state,
+so if you run "terraform plan" Terraform will not see any existing state
+for this configuration.
+ 
+$:~/desk/terraform/workspace_test# terraform workspace show
+prod
+
+$:~/desk/terraform/workspace_test# terraform workspace list
+  default
+* prod
