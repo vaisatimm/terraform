@@ -1,0 +1,2 @@
+terraform fmt # per controllare la formattazione dei file .tf
+terraform validate #per validare la configurazione
