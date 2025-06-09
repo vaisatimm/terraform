@@ -60,4 +60,4 @@ TERRAFORM LO FARA' PER NOI METTENDONE UNA NUOVA PER OGNI WORKSPACE NELLA CARTELL
 $ ls 
 stage/ dev/ prod/
 
-
+Ogni cartella al proprio interno avrà un terraform.tfstate
